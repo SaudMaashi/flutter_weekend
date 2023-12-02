@@ -13,7 +13,6 @@ class _HelpSessionPageState extends State<HelpSessionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffe1f1ea),
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Help Sessions"),
