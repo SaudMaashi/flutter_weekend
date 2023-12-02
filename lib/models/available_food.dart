@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AvailableFood {
-  Image image;
+  Widget image;
   String name;
   Icon icon;
 

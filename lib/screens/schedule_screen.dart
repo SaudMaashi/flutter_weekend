@@ -82,7 +82,7 @@ class _ScheduleState extends State<Schedule> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: const Color.fromARGB(255, 12, 12, 12).withOpacity(0.2),
+              color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.2),
               spreadRadius: 2,
               blurRadius: 5,
               offset: const Offset(0, 3), // changes position of shadow
