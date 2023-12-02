@@ -31,7 +31,7 @@ class MainScreen extends StatelessWidget {
             ),
             SizedBox(width: 7),
             Text(
-              "Saud Maashi & Abusafa",
+              "Saud Maashi",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

@@ -19,7 +19,7 @@ class Calendar extends StatelessWidget {
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10))),
         margin: const EdgeInsets.symmetric(horizontal: 10),
-        color: Color.fromARGB(255, 255, 255, 125),
+        color: const Color.fromARGB(255, 255, 255, 125),
         child: Row(
           children: [
             Padding(

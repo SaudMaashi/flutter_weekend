@@ -58,7 +58,7 @@ class _GradesState extends State<Grades> {
     return Container(
       decoration: BoxDecoration(
           color: colors['secondary'],
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topRight: Radius.circular(10),
             bottomRight: Radius.circular(10),
           ),
@@ -67,15 +67,15 @@ class _GradesState extends State<Grades> {
               color: Colors.black.withOpacity(0.2),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: Offset(0, 5),
+              offset: const Offset(0, 5),
             )
           ]),
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 15,
             ),
             Column(
@@ -89,14 +89,14 @@ class _GradesState extends State<Grades> {
                 ),
                 Text(
                   gpa!.toStringAsFixed(2),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 40,
                   ),
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               width: 40,
             ),
             Expanded(
@@ -117,12 +117,12 @@ class _GradesState extends State<Grades> {
                           gpaColor = getGpaColor(gpa);
                         });
                       }),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Text(
                     'Term $term',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 24,
                       color: Colors.black,
                     ),
@@ -141,31 +141,32 @@ class _GradesState extends State<Grades> {
       return Colors.black;
     }
     if (gpa <= 3.5) {
-      return Color.fromARGB(255, 205, 128, 50);
+      return const Color.fromARGB(255, 205, 128, 50);
     }
     if (gpa <= 3.75) {
-      return Color.fromARGB(255, 192, 192, 192);
-    } else
-      return Color.fromARGB(255, 255, 217, 0);
+      return const Color.fromARGB(255, 192, 192, 192);
+    } else {
+      return const Color.fromARGB(255, 255, 217, 0);
+    }
   }
 
   Card card(index, term) {
     return Card(
       color: homeGridList[index]['color'] as Color,
       elevation: 15,
-      margin: EdgeInsets.only(top: 15, bottom: 15, right: 30, left: 30),
+      margin: const EdgeInsets.only(top: 15, bottom: 15, right: 30, left: 30),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
             Text(
               grades[term]?['courses'][index]['course'],
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 30,
             ),
             Expanded(
@@ -173,7 +174,7 @@ class _GradesState extends State<Grades> {
               children: [
                 Text(
                   'Midterm: ${grades[term]?['courses'][index]['Midterm']}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     color: Colors.black,
                   ),
@@ -183,7 +184,7 @@ class _GradesState extends State<Grades> {
                 ),
                 Text(
                   'Final: ${grades[term]?['courses'][index]['Final']}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     color: Colors.black,
                   ),
