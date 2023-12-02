@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weekend/constants/constant_lists.dart';
 
 /// Dummy data that stores the user's classes' name, location,
 /// startTime and endTime
@@ -75,40 +76,53 @@ class _ScheduleState extends State<Schedule> {
   /// Method that returns a [Card] for the user's subject inputed as the [index]
   /// to for his classes sorted by [startTime]
   Widget card(int index) {
-    return Card(
-      color: Colors.white,
-      margin: const EdgeInsets.all(16.0),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          children: [
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  classes[index]['name'],
-                  style: const TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 8.0),
-                Text('Location: ${classes[index]['location']}'),
-              ],
-            ),
-            VerticalDivider(),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text('Start: ${convertToAmPm(classes[index]['startTime'])}'),
-                SizedBox(
-                  height: 15,
-                ),
-                Text('End: ${convertToAmPm(classes[index]['endTime'])}'),
-              ],
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: const Color.fromARGB(255, 12, 12, 12).withOpacity(0.2),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 3), // changes position of shadow
             ),
           ],
+          borderRadius: BorderRadius.circular(24),
+          color: homeGridList[index]['color'] as Color,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    classes[index]['name'],
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  Text('Location: ${classes[index]['location']}'),
+                ],
+              ),
+              VerticalDivider(),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Start: ${convertToAmPm(classes[index]['startTime'])}'),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text('End: ${convertToAmPm(classes[index]['endTime'])}'),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

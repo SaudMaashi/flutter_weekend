@@ -84,13 +84,6 @@ class ImportantContacts extends StatelessWidget {
                                 size: 18,
                                 color: Colors.white,
                               ),
-                              SizedBox(height: 2),
-                              Text(
-                                "Call",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
                             ],
                           ),
                         ),

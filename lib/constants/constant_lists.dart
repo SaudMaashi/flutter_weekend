@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_weekend/screens/to_do_screen.dart';
+import 'package:flutter_weekend/widgets/calendar.dart';
 
 const homeGridList = [
   {
@@ -58,7 +59,7 @@ const homeGridList = [
   },
   {
     'label': 'Clubs News',
-    'icon': 'teach',
+    'icon': 'news',
     'color': Color.fromARGB(255, 81, 81, 81),
     'navigation': "clubs",
   },
@@ -134,3 +135,32 @@ Map<int, Map<String, dynamic>> grades = {
     'gpa': 4.0,
   }
 };
+
+List<Calendar> calendarList = const [
+  Calendar(
+      date: "Aug 27",
+      activity: "REGISTRATION CONFIRMATION \n thru KFUPM Portal",
+      week: "Week: 1",
+      hegriDate: "11 Safar"),
+  Calendar(
+      date: "Aug 27",
+      activity: "Classes begin",
+      week: "Week: 1",
+      hegriDate: "11 Safar"),
+  Calendar(
+      date: "Aug 29",
+      activity:
+          " Last day for registration \n confirmation \n (11:59 PM) - Last day \n for adding courses.",
+      week: "Week: 1",
+      hegriDate: "11 Safar"),
+  Calendar(
+      date: "Sep 7",
+      activity: " Last day for dropping course(s) \n without permanent record",
+      week: "Week: 2",
+      hegriDate: "22 Safar"),
+  Calendar(
+      date: "Sep 17",
+      activity: " Registration for \n Co-op/Internship \n in term 232/233",
+      week: "Week: 4",
+      hegriDate: "02 - 06 Rabi I"),
+];

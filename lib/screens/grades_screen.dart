@@ -151,7 +151,7 @@ class _GradesState extends State<Grades> {
 
   Card card(index, term) {
     return Card(
-      color: Colors.white,
+      color: homeGridList[index]['color'] as Color,
       elevation: 15,
       margin: EdgeInsets.only(top: 15, bottom: 15, right: 30, left: 30),
       child: Padding(

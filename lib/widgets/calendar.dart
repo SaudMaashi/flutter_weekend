@@ -19,7 +19,7 @@ class Calendar extends StatelessWidget {
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10))),
         margin: const EdgeInsets.symmetric(horizontal: 10),
-        color: const Color.fromARGB(255, 238, 247, 255),
+        color: Color.fromARGB(255, 254, 197, 197),
         child: Row(
           children: [
             Padding(
@@ -30,8 +30,7 @@ class Calendar extends StatelessWidget {
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(14))),
-                  backgroundColor: const MaterialStatePropertyAll(
-                      Color.fromARGB(255, 228, 227, 227)),
+                  backgroundColor: const MaterialStatePropertyAll(Colors.white),
                   fixedSize: const MaterialStatePropertyAll(Size(90, 90)),
                 ),
                 child: Text(

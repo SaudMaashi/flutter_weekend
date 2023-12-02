@@ -1,6 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_weekend/constants/colors.dart';
+import 'package:flutter_weekend/constants/password.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/hotmail.dart';
 
@@ -27,7 +28,7 @@ class _SuggestionsState extends State<Suggestions> {
     String senderEmail = 'alaqsaakbar@hotmail.com';
     String feedback = _feedbackController.text;
     String userEmail = _emailController.text;
-    final smtpServer = hotmail(senderEmail, "4577");
+    final smtpServer = hotmail(senderEmail, kPassword);
 
     if (userEmail.isNotEmpty && !EmailValidator.validate(userEmail)) {
       userEmail = "Invalid Email";
