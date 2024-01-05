@@ -41,4 +41,4 @@ All these features and more are planned:
 
 **Grades Screen:**
 
-![image](./readme_screenshots/screenshot2.jpeg?raw=true "Grades Screen")
+![image](./readme_screenshots/screenshot3.jpeg?raw=true "Grades Screen")
